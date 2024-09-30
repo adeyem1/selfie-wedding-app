@@ -1,6 +1,14 @@
-@media only screen and (max-width: 768px) {
-    .mobile-bg {
-      background-image: url('./assets/home3.jpeg');
-    }
+.mobile-bg {
+  background-image: url('./assets/home3.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+
+/* Custom background for desktop view */
+@media (min-width: 640px) {
+  .desktop-bg {
+    background-image: url('/path/to/desktop-background.jpg');
+    background-position: center;
+    background-size: cover;
   }
-  
+}
