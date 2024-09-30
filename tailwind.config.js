@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'mobile-bg': "url('./home3.jpeg')", // Change to your mobile image
-        'desktop-bg': "url('./home2.jpeg')", // Use a different image for desktop if desired
+        'mobile-bg': "url('/images/home3.jpeg')", // Use absolute path from the public directory
+        'desktop-bg': "url('/images/home2.jpeg')", // Same here
       },
     },
   },
