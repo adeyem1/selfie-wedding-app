@@ -65,7 +65,7 @@ function App() {
 
   // Names of the couple
   const name1 = "Diamond";
-  const name2 = "Izu";
+  const name2 = "Robert";
   const date = "October 5, 2024";
 
   return (
@@ -74,7 +74,7 @@ function App() {
  className="flex justify-center items-center h-screen bg-mobile-bg sm:bg-desktop-bg bg-cover bg-center"
 >
   {/* Navbar */}
-  <nav className="absolute top-0 w-full z-50 flex justify-between items-center px-6 py-4 text-white bg-transparent">
+  <nav className=" name absolute top-0 w-full z-50 flex justify-between items-center px-6 py-4 text-white bg-transparent">
     <div className="text-lg font-bold">
       {name1} <span className="text-pink-400">❤️</span> {name2}
     </div>
@@ -99,18 +99,20 @@ function App() {
   </nav>
 
   {/* Main Content */}
-  <div className="text-center text-white">
-    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
-      {name1} <span className="text-pink-400">❤️💍</span> {name2}
+  <div className="text-center  ">
+    <h1 className="name2 text-4xl sm:text-5xl md:text-6xl font-bold  bg-opacity-50">
+    Welcome to Our Wedding Selfie Booth! 📸💍
     </h1>
 
-    <p className="mt-4 text-lg sm:text-xl md:text-2xl text-pink-400">{date}</p>
+    <p className=" name3 mt-4 text-lg sm:text-xl md:text-2xl  ">
+    We’re excited to celebrate with you! Capture the love, laughter, and fun moments. Snap your memories and be part of our special day!
+</p>
 
     <p className="mt-2 text-xl sm:text-2xl md:text-3xl text-black font-light">
-      SAVE THE DATE
+     
     </p>
 
-    <div className="mt-4 border-t-2 border-pink-400 w-16 mx-auto"></div>
+    <div className="mt-4 border-t-2 border-rose-200 w-16 mx-auto"></div>
   </div>
 </div>
 

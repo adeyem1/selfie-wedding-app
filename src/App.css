@@ -12,3 +12,17 @@
     background-size: cover;
   }
 }
+
+.name{
+  font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', 'serif';
+}
+.name2{
+  font-family:cursive;
+  color: #92666d;
+}
+.name3{
+  
+  color: #f9f8f7fc;
+  background-color: rgba(146, 100, 91, 0.243);
+}
+
