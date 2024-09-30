@@ -104,7 +104,7 @@ function App() {
     Welcome to Our Wedding Selfie Booth! 📸💍
     </h1>
 
-    <p className=" name3 mt-4 text-lg sm:text-xl md:text-2xl  ">
+    <p className=" name3 mt-4 text-lg sm:text-xl md:text-2xl p-4 ">
     We’re excited to celebrate with you! Capture the love, laughter, and fun moments. Snap your memories and be part of our special day!
 </p>
 
@@ -114,6 +114,21 @@ function App() {
 
     <div className="mt-4 border-t-2 border-rose-200 w-16 mx-auto"></div>
   </div>
+</div>
+
+<div className="  p-6 mb-4 bg-slate-100">
+  <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">How It Works:</h1>
+  <p className="mt-4 text-lg sm:text-xl md:text-2xl">
+<ul>
+  <li><b>Snap a Selfie: </b>Grab your phone, find your best angle, and take a selfie at the wedding. </li>
+  <li> <b>Upload & Share: </b>Use the camera icon to upload your photo and become part of our digital wedding album.</li>
+  <li><b>Spread the Love:</b> Feel free to add a fun message or tag your friends in the gallery. <br />
+  Let&apos;s Create Memories Together!</li>
+</ul>
+
+</p>
+<p className="mt-4 text-lg sm:text-xl md:text-2xl">From the silly moments to the glamorous poses, every picture tells a story. So let’s fill this space with the best memories of our special day!
+</p>
 </div>
 
 
