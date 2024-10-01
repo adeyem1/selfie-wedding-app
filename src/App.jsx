@@ -138,21 +138,23 @@ function App() {
 
       <div className="flex flex-col items-center justify-center h-screen bg-white-100">
       <div className="relative flex-grow w-full flex items-center justify-center">
-  <div className="border-4 border-gray-300 rounded-lg shadow-lg overflow-hidden w-full h-full max-w-screen-lg max-h-screen-lg">
+      <div className="border-4 border-gray-300 rounded-lg shadow-lg overflow-hidden w-full h-full max-w-screen-lg max-h-screen-lg">
     <Webcam
-      ref={webcamRef}
-      screenshotFormat="image/jpeg"
-      mirrored={true}
-      className="w-full h-[500px] object-cover aspect-video" // Set a fixed height
-      videoConstraints={{
-        width: 1280,
-        height: 720,
-        facingMode: "user", // For selfie mode on mobile
-      }}
-    />
-  </div>
-</div>
+  ref={webcamRef}
+  screenshotFormat="image/jpeg"
+  mirrored={true}
+  className="w-full h-full max-w-screen-lg max-h-screen-lg object-cover aspect-video"
+/>
 
+      {/* Capture Image Button */}
+      <button
+        onClick={captureImage}
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-pink-100 text-white font-semibold rounded-full shadow-lg hover:bg-pink-400 transition duration-300 ease-in-out flex items-center justify-center"
+      >
+        <span className="sr-only">Capture Image</span>
+      </button>
+    </div>
+  </div>
 </div>
 
 
