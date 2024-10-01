@@ -61,12 +61,12 @@ function App() {
     navigator.mediaDevices.getUserMedia({ video: true })
       .then(() => console.log("Camera permission granted"))
       .catch((error) => console.error("Camera permission denied", error));
-  }, []);
+  }, [imagesListRef]);
 
   // Names of the couple
   const name1 = "Diamond";
   const name2 = "Robert";
-  const date = "October 5, 2024";
+ 
 
   return (
     <div className="App">
@@ -118,7 +118,7 @@ function App() {
           <ul>
             <li><b>Snap a Selfie: </b>Grab your phone, find your best angle, and take a selfie at the wedding. </li>
             <li> <b>Upload & Share: </b>Use the camera icon to upload your photo and become part of our digital wedding album.</li>
-            <li><b>Spread the Love:</b> Feel free to add a fun message or tag your friends in the gallery.<br /> Let's Create Memories Together!</li>
+            <li><b>Spread the Love:</b> Feel free to add a fun message or tag your friends in the gallery.<br /> Let&apos;s Create Memories Together!</li>
           </ul>
         </p>
         <p className="mt-4 text-lg sm:text-xl md:text-2xl">From the silly moments to the glamorous poses, every picture tells a story. So let’s fill this space with the best memories of our special day!
@@ -129,24 +129,26 @@ function App() {
       <h1 id="camera" className="text-4xl sm:text-5xl md:text-6xl font-bold mt-4 text-center">Camera</h1>
       <p className="border-t-2 border-pink-400 w-16 mx-auto mb-4"></p>
 
-      <div className="flex flex-col items-center justify-center h-screen bg-white-100">
-        <div className="relative flex-grow w-full flex items-center justify-center">
-          <div className="border-4 border-gray-300 rounded-lg shadow-lg overflow-hidden w-full h-full max-w-screen-lg max-h-screen-lg">
-            <Webcam
-              ref={webcamRef}
-              screenshotFormat="image/jpeg"
-              mirrored={true}
-              className="w-full h-full max-w-screen-lg max-h-screen-lg object-cover"
-            />
-            {/* Capture Image Button */}
-            <button
-              onClick={captureImage}
-              className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-pink-100 text-white font-semibold rounded-full shadow-lg hover:bg-pink-400 transition duration-300 ease-in-out flex items-center justify-center"
-            >
-              <span className="sr-only">Capture Image</span>
-            </button>
-          </div>
-        </div>
+  
+      <div className="relative flex-grow w-full flex items-center justify-center">
+  <div className="border-2 border-gray-300 rounded-lg shadow-lg overflow-hidden w-full h-full max-w-screen-lg max-h-screen-lg">
+    <Webcam
+      ref={webcamRef}
+      screenshotFormat="image/jpeg"
+      mirrored={true}
+      className="w-full h-full max-w-screen-lg max-h-screen-lg object-cover"
+    />
+    {/* Capture Image Button */}
+    <button
+      onClick={captureImage}
+      className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-pink-100 text-white font-semibold rounded-full shadow-lg hover:bg-pink-400 transition duration-300 ease-in-out flex items-center justify-center z-10"
+    >
+      <span className="sr-only">Capture Image</span>
+    </button>
+  </div>
+
+
+
       </div>
 
       {/* Preview captured webcam image in a pop-up */}
@@ -168,8 +170,9 @@ function App() {
               <img src={capturedImage} alt="Captured" className="w-full rounded-lg shadow-lg" />
             </div>
 
-            {/* Button to upload captured webcam image */}
-            <div className="flex justify-center mt-4">
+            
+          {/* Button to upload captured webcam image */}
+          <div className="flex justify-center mt-4">
               <button
                 onClick={uploadFile}
                 className="px-4 sm:px-6 py-2 sm:py-3 bg-pink-400 text-white font-semibold rounded-lg shadow hover:bg-pink-200 transition duration-300 ease-in-out"
