@@ -153,36 +153,48 @@ function App() {
 
       {/* Preview captured webcam image in a pop-up */}
       {capturedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          {/* Modal content */}
-          <div className="relative bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-            
-            {/* Close Button (X) */}
-            <button
-              onClick={() => setCapturedImage(null)}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 bg-transparent font-bold p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition duration-300 ease-in-out"
-              aria-label="Close"
-            >
-              &times;
-            </button>
-            
-            <div className="flex justify-center">
-              <img src={capturedImage} alt="Captured" className="w-full rounded-lg shadow-lg" />
-            </div>
+  <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 transition-opacity duration-300 ease-out">
+    {/* Modal content */}
+    <div className="relative bg-white p-6 rounded-lg shadow-lg w-full max-w-lg mx-4 sm:mx-0 transition-transform transform scale-105 hover:scale-100">
+      
+      {/* Close Button (X) */}
+      <button
+        onClick={() => setCapturedImage(null)}
+        className="absolute top-2 right-2 text-gray-400 hover:text-gray-800 bg-transparent font-bold p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition duration-300 ease-in-out"
+        aria-label="Close"
+      >
+        &times;
+      </button>
 
-            
-          {/* Button to upload captured webcam image */}
-          <div className="flex justify-center mt-4">
-              <button
-                onClick={uploadFile}
-                className="px-4 sm:px-6 py-2 sm:py-3 bg-pink-400 text-white font-semibold rounded-lg shadow hover:bg-pink-200 transition duration-300 ease-in-out"
-              >
-                Upload Image
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Captured Image */}
+      <div className="flex justify-center mb-4">
+        <img
+          src={capturedImage}
+          alt="Captured"
+          className="w-full h-auto rounded-lg shadow-lg object-cover"
+        />
+      </div>
+
+      {/* Button to upload captured webcam image */}
+      <div className="flex justify-center space-x-4">
+        <button
+          onClick={uploadFile}
+          className="px-6 py-2 bg-pink-500 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105"
+        >
+          Upload Image
+        </button>
+
+        <button
+          onClick={() => setCapturedImage(null)}
+          className="px-6 py-2 bg-gray-300 text-gray-700 text-lg font-semibold rounded-lg shadow-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105"
+        >
+          Retake
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
 
       {/* Gallery Section */}
       <h1 id="gallery" className="text-4xl sm:text-5xl md:text-6xl font-bold mt-4 text-center">Gallery</h1>
@@ -192,7 +204,20 @@ function App() {
           <img key={index} src={url} alt={`uploaded-${index}`} className="w-full h-64 object-cover rounded-lg shadow-lg" />
         ))}
       </div>
+
+      {/* Footer Section */}
+<footer className="bg-black text-white text-center py-2 mt-6">
+  <div className="container mx-auto">
+    <p className="mb-2">
+      &copy; {new Date().getFullYear()}. Designed by 
+      <a href="https://www.instagram.com/adesanya_adeyemi_/" className="hover:text-pink-400 foot transition duration-300"> Adesanya Adeyemi</a>
+    </p>
+    
+  </div>
+</footer>
+
     </div>
+    
   );
 }
 
