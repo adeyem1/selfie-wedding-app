@@ -27,10 +27,12 @@
 }
 
 /* Safari specific styles */
+/* Safari-specific fix */
 @supports (-webkit-touch-callout: none) {
-  .webcam-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .webcam-container video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
+
