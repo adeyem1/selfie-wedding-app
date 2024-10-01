@@ -137,14 +137,15 @@ function App() {
       <p className="border-t-2 border-pink-400 w-16 mx-auto mb-4"></p>
 
       <div className="flex flex-col items-center justify-center h-screen bg-white-100">
-  <div className="relative flex-grow w-full flex items-center justify-center">
-    <div className="border-4 border-gray-300 rounded-lg shadow-lg overflow-hidden w-full h-full max-w-screen-lg max-h-screen-lg">
-      <Webcam
-        ref={webcamRef}
-        screenshotFormat="image/jpeg"
-        mirrored={true}
-        className="w-full h-full max-w-screen-lg max-h-screen-lg object-cover"
-      />
+      <div className="relative flex-grow w-full flex items-center justify-center">
+      <div className="border-4 border-gray-300 rounded-lg shadow-lg overflow-hidden w-full h-full max-w-screen-lg max-h-screen-lg">
+    <Webcam
+  ref={webcamRef}
+  screenshotFormat="image/jpeg"
+  mirrored={true}
+  className="w-full h-full max-w-screen-lg max-h-screen-lg object-cover aspect-video"
+/>
+
       {/* Capture Image Button */}
       <button
         onClick={captureImage}

@@ -26,3 +26,11 @@
   background-color: rgba(96, 91, 146, 0.243);
 }
 
+/* Safari specific styles */
+@supports (-webkit-touch-callout: none) {
+  .webcam-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
